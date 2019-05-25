@@ -63,10 +63,10 @@ int main(int argc, char **argv)
     matrix = (uint64_t*) malloc(size * size * sizeof(uint64_t));
     init_matrix(matrix, size);
 
-    printf("sum_matrix_row_based(matrix[%d][%d]): ", size, size);
+    printf("sum_matrix_row_based(matrix[%d][%d]):\n", size, size);
     timeit(1, sum_matrix_row_based, matrix, size);
-
-    printf("sum_matrix_col_based(matrix[%d][%d]): ", size, size);
+    printf("\n");
+    printf("sum_matrix_col_based(matrix[%d][%d]):\n", size, size);
     timeit(1, sum_matrix_col_based, matrix, size);
 
     free(matrix);
